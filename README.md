@@ -29,6 +29,6 @@ publicar no **GitHub Pages** e usar como link obrigatório no **Google Play Cons
 
 ## Personalização
 
-- **E-mail de contato:** o arquivo usa `app@titaniumfix.com.br`. Altere se necessário.
+- **E-mail de contato:** o arquivo usa `kevinramon121@gmail.com`. Altere se necessário.
 - **Nome do app:** se você renomear o CalcFrete, atualize o título e os textos do `index.html`.
 - **Data:** atualize "Última atualização" sempre que mudar a política.
