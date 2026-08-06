@@ -127,6 +127,30 @@
       padding: 24px 0;
     }
 
+    .docnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 20px;
+    }
+
+    .docnav a {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .docnav a[aria-current="page"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -155,8 +179,13 @@
       <p>Aplicativo <strong>CalcFrete</strong> — gestor para caminhoneiros e motoristas de frete</p>
     </header>
 
+    <nav class="docnav">
+      <a href="index.html" aria-current="page">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+    </nav>
+
     <main>
-      <span class="badge">Última atualização: 14 de julho de 2026</span>
+      <span class="badge">Última atualização: 6 de agosto de 2026</span>
 
       <p>
         Esta Política de Privacidade descreve como o aplicativo <strong>CalcFrete</strong> (“aplicativo”,
@@ -182,6 +211,13 @@
           <strong>Login com Google (opcional)</strong> — se você optar por entrar com sua conta
           Google, recebemos do Google seu <strong>nome</strong> e <strong>e-mail</strong> para criar
           e autenticar sua conta. Não temos acesso à sua senha do Google.
+        </li>
+        <li>
+          <strong>Login com Apple (opcional, iOS)</strong> — se você optar por entrar com sua conta
+          Apple, recebemos seu <strong>nome</strong> e <strong>e-mail</strong>. A Apple permite que
+          você <strong>oculte seu e-mail real</strong>; nesse caso recebemos apenas um endereço de
+          encaminhamento privado (<em>privaterelay.appleid.com</em>), e é ele que fica na sua conta.
+          Não temos acesso à sua senha da Apple.
         </li>
       </ul>
 
@@ -252,6 +288,12 @@
           <strong>Identificador de publicidade (AD_ID)</strong> — usado para exibir anúncios no plano
           gratuito (veja a seção 2.5). Não é usado por assinantes do plano Pro.
         </li>
+        <li>
+          <strong>Permissão de rastreamento (iOS)</strong> — no iPhone/iPad, o sistema exibe a
+          solicitação <em>App Tracking Transparency</em> antes de qualquer uso do identificador de
+          publicidade. Se você recusar, o app continua funcionando normalmente e os anúncios seguem
+          <strong>não personalizados</strong>.
+        </li>
       </ul>
 
       <h3>2.5. Anúncios (plano gratuito)</h3>
@@ -262,11 +304,47 @@
         aparelho e interações com o anúncio) para exibir e medir os anúncios. Os anúncios são
         configurados como <strong>não personalizados</strong> por padrão.
       </p>
+      <p>Os formatos exibidos são:</p>
+      <ul>
+        <li><strong>Banner</strong> — faixa fixa no rodapé das telas.</li>
+        <li><strong>Anúncio de abertura</strong> — exibido ao retomar o aplicativo depois de deixá-lo em segundo plano.</li>
+        <li>
+          <strong>Anúncio premiado</strong> — <em>opcional e iniciado por você</em>: ao assistir o
+          vídeo até o fim, você libera o acesso a uma ferramenta do plano Pro durante aquela visita.
+          Registramos apenas <strong>quantos anúncios premiados você assistiu no dia</strong>, para
+          aplicar o limite diário.
+        </li>
+      </ul>
       <p>
         Na primeira execução, quando aplicável (por exemplo, na União Europeia, Reino Unido e Suíça),
         exibimos um formulário de <strong>consentimento (UMP)</strong> antes de qualquer coleta para
-        anúncios, conforme exigido pelo Google. Assinantes do <strong>plano Pro não veem anúncios</strong>
-        e o identificador de publicidade não é utilizado para esse fim.
+        anúncios, conforme exigido pelo Google. No iOS, a permissão de rastreamento do sistema (ATT)
+        é solicitada antes disso. Assinantes do <strong>plano Pro não veem anúncios</strong> e o
+        identificador de publicidade não é utilizado para esse fim.
+      </p>
+
+      <h3>2.6. Assinatura do plano Pro</h3>
+      <p>
+        O plano Pro é uma <strong>assinatura com renovação automática</strong> contratada e cobrada
+        pela loja do seu aparelho: <strong>Google Play</strong> (Android) ou <strong>App Store</strong>
+        (iOS). O pagamento acontece inteiramente dentro da loja —
+        <strong>não recebemos, não processamos e não armazenamos dados de cartão</strong> ou qualquer
+        meio de pagamento.
+      </p>
+      <p>
+        Para liberar os recursos pagos, o aplicativo envia ao nosso servidor o
+        <strong>comprovante da compra</strong> emitido pela loja (um token, no Android; um recibo, no
+        iOS). Nós o validamos junto à loja e guardamos o <strong>estado da sua assinatura</strong>
+        (plano ativo, produto e data de expiração), vinculado à sua conta. Esse comprovante identifica
+        a compra, não você.
+      </p>
+
+      <h3>2.7. Verificação de integridade e prevenção a fraudes</h3>
+      <p>
+        Para impedir o uso de versões adulteradas do aplicativo e a liberação indevida de recursos
+        pagos, o app pode enviar ao nosso servidor um <strong>atestado de integridade</strong> gerado
+        pelo sistema operacional (<em>Play Integrity API</em>, no Android). Esse atestado informa se o
+        aplicativo e o dispositivo são legítimos e <strong>não identifica você pessoalmente</strong>.
       </p>
 
       <h2>3. Como usamos seus dados</h2>
@@ -306,6 +384,14 @@
         <li>
           <strong>Google AdMob (Google LLC)</strong> — exibição e medição de anúncios no plano
           gratuito, podendo usar o identificador de publicidade do dispositivo (veja a seção 2.5).
+        </li>
+        <li>
+          <strong>Apple Inc.</strong> — apenas no iOS: login com Apple (quando você escolhe essa
+          opção) e processamento da assinatura do plano Pro pela App Store.
+        </li>
+        <li>
+          <strong>Google Play (Google LLC)</strong> — apenas no Android: processamento da assinatura
+          do plano Pro.
         </li>
       </ul>
       <p>
@@ -350,11 +436,11 @@
       </p>
 
       <h2>9. Exclusão da conta e dos dados</h2>
-      <p>Você pode solicitar a exclusão da sua conta e de todos os dados associados de duas formas:</p>
+      <p>Você pode excluir sua conta e todos os dados associados de duas formas:</p>
       <ul>
         <li>
-          <strong>No aplicativo:</strong> exclua seus registros nas telas correspondentes e saia da
-          conta; ou
+          <strong>No aplicativo (imediato):</strong> abra <em>Perfil → Excluir minha conta</em> e
+          confirme. Isso apaga sua conta de acesso e os dados vinculados a ela nos nossos servidores.
         </li>
         <li>
           <strong>Por e-mail:</strong> envie uma solicitação para
@@ -362,6 +448,12 @@
           Processaremos a exclusão em até 30 dias.
         </li>
       </ul>
+      <div class="callout">
+        <strong>Assinatura:</strong> excluir a conta <strong>não cancela</strong> a assinatura do
+        plano Pro, porque ela é administrada pela loja. Cancele em
+        <em>Google Play → Assinaturas</em> (Android) ou <em>Ajustes → [seu nome] → Assinaturas</em>
+        (iOS).
+      </div>
 
       <h2>10. Privacidade de crianças</h2>
       <p>
@@ -384,7 +476,9 @@
       </p>
     </main>
 
-    <footer>© 2026 CalcFrete. Todos os direitos reservados.</footer>
+    <footer>
+      <a href="termos.html">Termos de Uso</a> · © 2026 CalcFrete. Todos os direitos reservados.
+    </footer>
   </div>
 </body>
 
