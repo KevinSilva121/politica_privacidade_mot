@@ -169,317 +169,995 @@
     th {
       background: #f8fafc;
     }
+
+    /* Seletor de idioma */
+    .langbar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .langbar button {
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .langbar button[aria-current="true"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    .doc[hidden] {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
   <div class="wrap">
-    <header>
-      <h1>Política de Privacidade</h1>
-      <p>Aplicativo <strong>CalcFrete</strong> — gestor para caminhoneiros e motoristas de frete</p>
-    </header>
+    <div class="langbar" role="group" aria-label="Idioma / Language / Idioma">
+      <button type="button" data-set="pt">PT</button>
+      <button type="button" data-set="en">EN</button>
+      <button type="button" data-set="es">ES</button>
+    </div>
 
-    <nav class="docnav">
-      <a href="index.html" aria-current="page">Política de Privacidade</a>
-      <a href="termos.html">Termos de Uso</a>
-    </nav>
+    <!-- ==================== PORTUGUÊS ==================== -->
+    <div class="doc" data-lang="pt">
+      <header>
+        <h1>Política de Privacidade</h1>
+        <p>Aplicativo <strong>CalcFrete</strong> — gestor para caminhoneiros e motoristas de frete</p>
+      </header>
 
-    <main>
-      <span class="badge">Última atualização: 6 de agosto de 2026</span>
+      <nav class="docnav">
+        <a href="index.html" aria-current="page">Política de Privacidade</a>
+        <a href="termos.html">Termos de Uso</a>
+      </nav>
 
-      <p>
-        Esta Política de Privacidade descreve como o aplicativo <strong>CalcFrete</strong> (“aplicativo”,
-        “nós”) coleta, usa, armazena e protege as informações dos seus usuários (“você”). Ao utilizar o
-        CalcFrete, você concorda com as práticas descritas neste documento. Tratamos seus dados em
-        conformidade com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD)</strong>.
-      </p>
+      <main>
+        <span class="badge">Última atualização: 6 de agosto de 2026</span>
 
-      <h2>1. Quem é o responsável pelos dados</h2>
-      <p>
-        O tratamento dos dados é realizado por <strong>Innovate Apps Co.</strong>, responsável pelo
-        aplicativo CalcFrete. Para qualquer assunto relacionado à privacidade, entre em contato pelo e-mail:
-        <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>.
-      </p>
+        <p>
+          Esta Política de Privacidade descreve como o aplicativo <strong>CalcFrete</strong> (“aplicativo”,
+          “nós”) coleta, usa, armazena e protege as informações dos seus usuários (“você”). Ao utilizar o
+          CalcFrete, você concorda com as práticas descritas neste documento. Tratamos seus dados em
+          conformidade com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD)</strong>.
+        </p>
 
-      <h2>2. Quais dados coletamos</h2>
+        <h2>1. Quem é o responsável pelos dados</h2>
+        <p>
+          O tratamento dos dados é realizado por <strong>Innovate Apps Co.</strong>, responsável pelo
+          aplicativo CalcFrete. Para qualquer assunto relacionado à privacidade, entre em contato pelo e-mail:
+          <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>.
+        </p>
 
-      <h3>2.1. Dados de conta</h3>
-      <ul>
-        <li><strong>E-mail e senha</strong> — usados para criar e autenticar sua conta.</li>
-        <li><strong>Nome, sobrenome e nome de usuário</strong> — informados por você no cadastro/perfil.</li>
-        <li>
-          <strong>Login com Google (opcional)</strong> — se você optar por entrar com sua conta
-          Google, recebemos do Google seu <strong>nome</strong> e <strong>e-mail</strong> para criar
-          e autenticar sua conta. Não temos acesso à sua senha do Google.
-        </li>
-        <li>
-          <strong>Login com Apple (opcional, iOS)</strong> — se você optar por entrar com sua conta
-          Apple, recebemos seu <strong>nome</strong> e <strong>e-mail</strong>. A Apple permite que
-          você <strong>oculte seu e-mail real</strong>; nesse caso recebemos apenas um endereço de
-          encaminhamento privado (<em>privaterelay.appleid.com</em>), e é ele que fica na sua conta.
-          Não temos acesso à sua senha da Apple.
-        </li>
-      </ul>
+        <h2>2. Quais dados coletamos</h2>
 
-      <h3>2.2. Dados que você insere no aplicativo</h3>
-      <p>São informações de uso que você cadastra voluntariamente para usar as funcionalidades:</p>
-      <table>
-        <tr>
-          <th>Funcionalidade</th>
-          <th>Dados</th>
-        </tr>
-        <tr>
-          <td>Veículos</td>
-          <td>Modelo, placa, quilometragem, consumo médio, preço de combustível.</td>
-        </tr>
-        <tr>
-          <td>Finanças</td>
-          <td>Receitas, despesas, abastecimentos, valores, datas, categorias e status.</td>
-        </tr>
-        <tr>
-          <td>Diário de Bordo / Viagens</td>
-          <td>Origem, destino, quilometragem, valor do frete e custos da viagem.</td>
-        </tr>
-        <tr>
-          <td>Combustível e Manutenções</td>
-          <td>Médias de consumo, custos e lembretes de manutenção preventiva.</td>
-        </tr>
-        <tr>
-          <td>Acertos e Recibos de frete</td>
-          <td>Diárias, comissões, vales, descontos e dados do recibo (remetente, destinatário, carga, valor, nome do
-            motorista).</td>
-        </tr>
-        <tr>
-          <td>Controle de Jornada</td>
-          <td>Registros de tempo de direção, paradas, descanso e refeição.</td>
-        </tr>
-        <tr>
-          <td>Documentos</td>
-          <td>Apenas o <strong>tipo</strong> do documento (ex.: CNH, CRLV) e a <strong>data de vencimento</strong>.</td>
-        </tr>
-        <tr>
-          <td>Lembretes e Checklists</td>
-          <td>Títulos, datas, horários e itens de vistoria.</td>
-        </tr>
-      </table>
+        <h3>2.1. Dados de conta</h3>
+        <ul>
+          <li><strong>E-mail e senha</strong> — usados para criar e autenticar sua conta.</li>
+          <li><strong>Nome, sobrenome e nome de usuário</strong> — informados por você no cadastro/perfil.</li>
+          <li>
+            <strong>Login com Google (opcional)</strong> — se você optar por entrar com sua conta
+            Google, recebemos do Google seu <strong>nome</strong> e <strong>e-mail</strong> para criar
+            e autenticar sua conta. Não temos acesso à sua senha do Google.
+          </li>
+          <li>
+            <strong>Login com Apple (opcional, iOS)</strong> — se você optar por entrar com sua conta
+            Apple, recebemos seu <strong>nome</strong> e <strong>e-mail</strong>. A Apple permite que
+            você <strong>oculte seu e-mail real</strong>; nesse caso recebemos apenas um endereço de
+            encaminhamento privado (<em>privaterelay.appleid.com</em>), e é ele que fica na sua conta.
+            Não temos acesso à sua senha da Apple.
+          </li>
+        </ul>
 
-      <div class="callout">
-        <strong>Minimização de dados sensíveis:</strong> na funcionalidade de Documentos, o aplicativo
-        <strong>não solicita nem armazena</strong> números de documento, CPF, RG ou fotos. Guardamos
-        somente o tipo e a data de vencimento, para emitir avisos de validade.
-      </div>
+        <h3>2.2. Dados que você insere no aplicativo</h3>
+        <p>São informações de uso que você cadastra voluntariamente para usar as funcionalidades:</p>
+        <table>
+          <tr>
+            <th>Funcionalidade</th>
+            <th>Dados</th>
+          </tr>
+          <tr>
+            <td>Veículos</td>
+            <td>Modelo, placa, quilometragem, consumo médio, preço de combustível.</td>
+          </tr>
+          <tr>
+            <td>Finanças</td>
+            <td>Receitas, despesas, abastecimentos, valores, datas, categorias e status.</td>
+          </tr>
+          <tr>
+            <td>Diário de Bordo / Viagens</td>
+            <td>Origem, destino, quilometragem, valor do frete e custos da viagem.</td>
+          </tr>
+          <tr>
+            <td>Combustível e Manutenções</td>
+            <td>Médias de consumo, custos e lembretes de manutenção preventiva.</td>
+          </tr>
+          <tr>
+            <td>Acertos e Recibos de frete</td>
+            <td>Diárias, comissões, vales, descontos e dados do recibo (remetente, destinatário, carga, valor, nome do
+              motorista).</td>
+          </tr>
+          <tr>
+            <td>Controle de Jornada</td>
+            <td>Registros de tempo de direção, paradas, descanso e refeição.</td>
+          </tr>
+          <tr>
+            <td>Documentos</td>
+            <td>Apenas o <strong>tipo</strong> do documento (ex.: CNH, CRLV) e a <strong>data de vencimento</strong>.</td>
+          </tr>
+          <tr>
+            <td>Lembretes e Checklists</td>
+            <td>Títulos, datas, horários e itens de vistoria.</td>
+          </tr>
+        </table>
 
-      <h3>2.3. Gravação de áudio (lançamento por voz)</h3>
-      <p>
-        O aplicativo oferece um recurso opcional de <strong>lançamento por voz</strong>. Quando você
-        ativa esse recurso, o áudio é capturado pelo microfone e enviado para um serviço de
-        inteligência artificial (<strong>Groq</strong>) para transcrição e interpretação, com o objetivo
-        de criar lançamentos automaticamente. O áudio é processado apenas para essa finalidade. Se você
-        não utilizar o recurso, nenhum áudio é capturado.
-      </p>
+        <div class="callout">
+          <strong>Minimização de dados sensíveis:</strong> na funcionalidade de Documentos, o aplicativo
+          <strong>não solicita nem armazena</strong> números de documento, CPF, RG ou fotos. Guardamos
+          somente o tipo e a data de vencimento, para emitir avisos de validade.
+        </div>
 
-      <h3>2.4. Permissões do dispositivo</h3>
-      <ul>
-        <li><strong>Microfone</strong> — apenas quando você usa o lançamento por voz.</li>
-        <li><strong>Notificações</strong> — para enviar lembretes (vencimentos, lembretes do dia).</li>
-        <li><strong>Alarmes/agendamento</strong> — para programar os lembretes localmente.</li>
-        <li><strong>Internet</strong> — para sincronizar seus dados com a nuvem.</li>
-        <li>
-          <strong>Identificador de publicidade (AD_ID)</strong> — usado para exibir anúncios no plano
-          gratuito (veja a seção 2.5). Não é usado por assinantes do plano Pro.
-        </li>
-        <li>
-          <strong>Permissão de rastreamento (iOS)</strong> — no iPhone/iPad, o sistema exibe a
-          solicitação <em>App Tracking Transparency</em> antes de qualquer uso do identificador de
-          publicidade. Se você recusar, o app continua funcionando normalmente e os anúncios seguem
-          <strong>não personalizados</strong>.
-        </li>
-      </ul>
+        <h3>2.3. Gravação de áudio (lançamento por voz)</h3>
+        <p>
+          O aplicativo oferece um recurso opcional de <strong>lançamento por voz</strong>. Quando você
+          ativa esse recurso, o áudio é capturado pelo microfone e enviado para um serviço de
+          inteligência artificial (<strong>Groq</strong>) para transcrição e interpretação, com o objetivo
+          de criar lançamentos automaticamente. O áudio é processado apenas para essa finalidade. Se você
+          não utilizar o recurso, nenhum áudio é capturado.
+        </p>
 
-      <h3>2.5. Anúncios (plano gratuito)</h3>
-      <p>
-        O plano <strong>gratuito</strong> do CalcFrete exibe anúncios por meio do
-        <strong>Google AdMob</strong> (Google LLC). Para isso, o AdMob pode coletar e usar o
-        <strong>identificador de publicidade</strong> do dispositivo e dados técnicos (como tipo de
-        aparelho e interações com o anúncio) para exibir e medir os anúncios. Os anúncios são
-        configurados como <strong>não personalizados</strong> por padrão.
-      </p>
-      <p>Os formatos exibidos são:</p>
-      <ul>
-        <li><strong>Banner</strong> — faixa fixa no rodapé das telas.</li>
-        <li><strong>Anúncio de abertura</strong> — exibido ao retomar o aplicativo depois de deixá-lo em segundo plano.</li>
-        <li>
-          <strong>Anúncio premiado</strong> — <em>opcional e iniciado por você</em>: ao assistir o
-          vídeo até o fim, você libera o acesso a uma ferramenta do plano Pro durante aquela visita.
-          Registramos apenas <strong>quantos anúncios premiados você assistiu no dia</strong>, para
-          aplicar o limite diário.
-        </li>
-      </ul>
-      <p>
-        Na primeira execução, quando aplicável (por exemplo, na União Europeia, Reino Unido e Suíça),
-        exibimos um formulário de <strong>consentimento (UMP)</strong> antes de qualquer coleta para
-        anúncios, conforme exigido pelo Google. No iOS, a permissão de rastreamento do sistema (ATT)
-        é solicitada antes disso. Assinantes do <strong>plano Pro não veem anúncios</strong> e o
-        identificador de publicidade não é utilizado para esse fim.
-      </p>
+        <h3>2.4. Permissões do dispositivo</h3>
+        <ul>
+          <li><strong>Microfone</strong> — apenas quando você usa o lançamento por voz.</li>
+          <li><strong>Notificações</strong> — para enviar lembretes (vencimentos, lembretes do dia).</li>
+          <li><strong>Alarmes/agendamento</strong> — para programar os lembretes localmente.</li>
+          <li><strong>Internet</strong> — para sincronizar seus dados com a nuvem.</li>
+          <li>
+            <strong>Identificador de publicidade (AD_ID)</strong> — usado para exibir anúncios no plano
+            gratuito (veja a seção 2.5). Não é usado por assinantes do plano Pro.
+          </li>
+          <li>
+            <strong>Permissão de rastreamento (iOS)</strong> — no iPhone/iPad, o sistema exibe a
+            solicitação <em>App Tracking Transparency</em> antes de qualquer uso do identificador de
+            publicidade. Se você recusar, o app continua funcionando normalmente e os anúncios seguem
+            <strong>não personalizados</strong>.
+          </li>
+        </ul>
 
-      <h3>2.6. Assinatura do plano Pro</h3>
-      <p>
-        O plano Pro é uma <strong>assinatura com renovação automática</strong> contratada e cobrada
-        pela loja do seu aparelho: <strong>Google Play</strong> (Android) ou <strong>App Store</strong>
-        (iOS). O pagamento acontece inteiramente dentro da loja —
-        <strong>não recebemos, não processamos e não armazenamos dados de cartão</strong> ou qualquer
-        meio de pagamento.
-      </p>
-      <p>
-        Para liberar os recursos pagos, o aplicativo envia ao nosso servidor o
-        <strong>comprovante da compra</strong> emitido pela loja (um token, no Android; um recibo, no
-        iOS). Nós o validamos junto à loja e guardamos o <strong>estado da sua assinatura</strong>
-        (plano ativo, produto e data de expiração), vinculado à sua conta. Esse comprovante identifica
-        a compra, não você.
-      </p>
+        <h3>2.5. Anúncios (plano gratuito)</h3>
+        <p>
+          O plano <strong>gratuito</strong> do CalcFrete exibe anúncios por meio do
+          <strong>Google AdMob</strong> (Google LLC). Para isso, o AdMob pode coletar e usar o
+          <strong>identificador de publicidade</strong> do dispositivo e dados técnicos (como tipo de
+          aparelho e interações com o anúncio) para exibir e medir os anúncios. Os anúncios são
+          configurados como <strong>não personalizados</strong> por padrão.
+        </p>
+        <p>Os formatos exibidos são:</p>
+        <ul>
+          <li><strong>Banner</strong> — faixa fixa no rodapé das telas.</li>
+          <li><strong>Anúncio de abertura</strong> — exibido ao retomar o aplicativo depois de deixá-lo em segundo plano.</li>
+          <li>
+            <strong>Anúncio premiado</strong> — <em>opcional e iniciado por você</em>: ao assistir o
+            vídeo até o fim, você libera o acesso a uma ferramenta do plano Pro durante aquela visita.
+            Registramos apenas <strong>quantos anúncios premiados você assistiu no dia</strong>, para
+            aplicar o limite diário.
+          </li>
+        </ul>
+        <p>
+          Na primeira execução, quando aplicável (por exemplo, na União Europeia, Reino Unido e Suíça),
+          exibimos um formulário de <strong>consentimento (UMP)</strong> antes de qualquer coleta para
+          anúncios, conforme exigido pelo Google. No iOS, a permissão de rastreamento do sistema (ATT)
+          é solicitada antes disso. Assinantes do <strong>plano Pro não veem anúncios</strong> e o
+          identificador de publicidade não é utilizado para esse fim.
+        </p>
 
-      <h3>2.7. Verificação de integridade e prevenção a fraudes</h3>
-      <p>
-        Para impedir o uso de versões adulteradas do aplicativo e a liberação indevida de recursos
-        pagos, o app pode enviar ao nosso servidor um <strong>atestado de integridade</strong> gerado
-        pelo sistema operacional (<em>Play Integrity API</em>, no Android). Esse atestado informa se o
-        aplicativo e o dispositivo são legítimos e <strong>não identifica você pessoalmente</strong>.
-      </p>
+        <h3>2.6. Assinatura do plano Pro</h3>
+        <p>
+          O plano Pro é uma <strong>assinatura com renovação automática</strong> contratada e cobrada
+          pela loja do seu aparelho: <strong>Google Play</strong> (Android) ou <strong>App Store</strong>
+          (iOS). O pagamento acontece inteiramente dentro da loja —
+          <strong>não recebemos, não processamos e não armazenamos dados de cartão</strong> ou qualquer
+          meio de pagamento.
+        </p>
+        <p>
+          Para liberar os recursos pagos, o aplicativo envia ao nosso servidor o
+          <strong>comprovante da compra</strong> emitido pela loja (um token, no Android; um recibo, no
+          iOS). Nós o validamos junto à loja e guardamos o <strong>estado da sua assinatura</strong>
+          (plano ativo, produto e data de expiração), vinculado à sua conta. Esse comprovante identifica
+          a compra, não você.
+        </p>
 
-      <h2>3. Como usamos seus dados</h2>
-      <ul>
-        <li>Autenticar seu acesso e manter sua sessão.</li>
-        <li>Fornecer e operar as funcionalidades do aplicativo (cálculos, registros, relatórios).</li>
-        <li>Sincronizar e armazenar com segurança seus dados entre dispositivos.</li>
-        <li>Enviar notificações e lembretes que você configurar.</li>
-        <li>Transcrever áudio em lançamentos, quando você usar o recurso de voz.</li>
-        <li>Melhorar a estabilidade e a segurança do aplicativo.</li>
-      </ul>
-      <p class="muted">
-        <strong>Não vendemos</strong> seus dados pessoais. No plano gratuito, exibimos anúncios via
-        Google AdMob (seção 2.5); no plano Pro, não há anúncios.
-      </p>
+        <h3>2.7. Verificação de integridade e prevenção a fraudes</h3>
+        <p>
+          Para impedir o uso de versões adulteradas do aplicativo e a liberação indevida de recursos
+          pagos, o app pode enviar ao nosso servidor um <strong>atestado de integridade</strong> gerado
+          pelo sistema operacional (<em>Play Integrity API</em>, no Android). Esse atestado informa se o
+          aplicativo e o dispositivo são legítimos e <strong>não identifica você pessoalmente</strong>.
+        </p>
 
-      <h2>4. Base legal (LGPD)</h2>
-      <p>O tratamento dos seus dados se baseia em:</p>
-      <ul>
-        <li><strong>Execução de contrato</strong> — para fornecer as funcionalidades que você solicita.</li>
-        <li><strong>Consentimento</strong> — para recursos opcionais, como o microfone (voz) e as notificações.</li>
-        <li><strong>Legítimo interesse</strong> — para segurança e bom funcionamento do aplicativo.</li>
-      </ul>
+        <h2>3. Como usamos seus dados</h2>
+        <ul>
+          <li>Autenticar seu acesso e manter sua sessão.</li>
+          <li>Fornecer e operar as funcionalidades do aplicativo (cálculos, registros, relatórios).</li>
+          <li>Sincronizar e armazenar com segurança seus dados entre dispositivos.</li>
+          <li>Enviar notificações e lembretes que você configurar.</li>
+          <li>Transcrever áudio em lançamentos, quando você usar o recurso de voz.</li>
+          <li>Melhorar a estabilidade e a segurança do aplicativo.</li>
+        </ul>
+        <p class="muted">
+          <strong>Não vendemos</strong> seus dados pessoais. No plano gratuito, exibimos anúncios via
+          Google AdMob (seção 2.5); no plano Pro, não há anúncios.
+        </p>
 
-      <h2>5. Compartilhamento com terceiros</h2>
-      <p>Utilizamos provedores de serviço para operar o aplicativo:</p>
-      <ul>
-        <li>
-          <strong>Google Firebase (Google LLC)</strong> — autenticação e banco de dados em nuvem
-          (Firebase Authentication e Cloud Firestore), onde seus dados ficam armazenados de forma
-          isolada por usuário.
-        </li>
-        <li>
-          <strong>Groq, Inc.</strong> — transcrição do áudio em texto, apenas quando você usa o
-          lançamento por voz.
-        </li>
-        <li>
-          <strong>Google AdMob (Google LLC)</strong> — exibição e medição de anúncios no plano
-          gratuito, podendo usar o identificador de publicidade do dispositivo (veja a seção 2.5).
-        </li>
-        <li>
-          <strong>Apple Inc.</strong> — apenas no iOS: login com Apple (quando você escolhe essa
-          opção) e processamento da assinatura do plano Pro pela App Store.
-        </li>
-        <li>
-          <strong>Google Play (Google LLC)</strong> — apenas no Android: processamento da assinatura
-          do plano Pro.
-        </li>
-      </ul>
-      <p>
-        Esses provedores tratam os dados conforme suas próprias políticas de privacidade e apenas para
-        prestar os serviços ao CalcFrete. <strong>Não vendemos</strong> seus dados pessoais nem os
-        compartilhamos para marketing de terceiros fora do sistema de anúncios do AdMob descrito acima.
-      </p>
+        <h2>4. Base legal (LGPD)</h2>
+        <p>O tratamento dos seus dados se baseia em:</p>
+        <ul>
+          <li><strong>Execução de contrato</strong> — para fornecer as funcionalidades que você solicita.</li>
+          <li><strong>Consentimento</strong> — para recursos opcionais, como o microfone (voz) e as notificações.</li>
+          <li><strong>Legítimo interesse</strong> — para segurança e bom funcionamento do aplicativo.</li>
+        </ul>
 
-      <h2>6. Armazenamento e segurança</h2>
-      <ul>
-        <li>Os dados são transmitidos por conexões criptografadas (HTTPS).</li>
-        <li>
-          Aplicamos regras de segurança que <strong>isolam os dados por usuário</strong>: cada usuário só
-          acessa as próprias informações.
-        </li>
-        <li>O acesso à conta é protegido por e-mail e senha.</li>
-      </ul>
-      <p class="muted">
-        Nenhum método de transmissão ou armazenamento é 100% seguro, mas adotamos medidas técnicas e
-        organizacionais para proteger seus dados.
-      </p>
+        <h2>5. Compartilhamento com terceiros</h2>
+        <p>Utilizamos provedores de serviço para operar o aplicativo:</p>
+        <ul>
+          <li>
+            <strong>Google Firebase (Google LLC)</strong> — autenticação e banco de dados em nuvem
+            (Firebase Authentication e Cloud Firestore), onde seus dados ficam armazenados de forma
+            isolada por usuário.
+          </li>
+          <li>
+            <strong>Groq, Inc.</strong> — transcrição do áudio em texto, apenas quando você usa o
+            lançamento por voz.
+          </li>
+          <li>
+            <strong>Google AdMob (Google LLC)</strong> — exibição e medição de anúncios no plano
+            gratuito, podendo usar o identificador de publicidade do dispositivo (veja a seção 2.5).
+          </li>
+          <li>
+            <strong>Apple Inc.</strong> — apenas no iOS: login com Apple (quando você escolhe essa
+            opção) e processamento da assinatura do plano Pro pela App Store.
+          </li>
+          <li>
+            <strong>Google Play (Google LLC)</strong> — apenas no Android: processamento da assinatura
+            do plano Pro.
+          </li>
+        </ul>
+        <p>
+          Esses provedores tratam os dados conforme suas próprias políticas de privacidade e apenas para
+          prestar os serviços ao CalcFrete. <strong>Não vendemos</strong> seus dados pessoais nem os
+          compartilhamos para marketing de terceiros fora do sistema de anúncios do AdMob descrito acima.
+        </p>
 
-      <h2>7. Retenção dos dados</h2>
-      <p>
-        Mantemos seus dados enquanto sua conta estiver ativa. Você pode excluir registros individuais a
-        qualquer momento dentro do aplicativo. Ao solicitar a exclusão da conta, seus dados pessoais são
-        removidos, salvo quando a manutenção for exigida por obrigação legal.
-      </p>
+        <h2>6. Armazenamento e segurança</h2>
+        <ul>
+          <li>Os dados são transmitidos por conexões criptografadas (HTTPS).</li>
+          <li>
+            Aplicamos regras de segurança que <strong>isolam os dados por usuário</strong>: cada usuário só
+            acessa as próprias informações.
+          </li>
+          <li>O acesso à conta é protegido por e-mail e senha.</li>
+        </ul>
+        <p class="muted">
+          Nenhum método de transmissão ou armazenamento é 100% seguro, mas adotamos medidas técnicas e
+          organizacionais para proteger seus dados.
+        </p>
 
-      <h2>8. Seus direitos (LGPD)</h2>
-      <p>Você pode, a qualquer momento:</p>
-      <ul>
-        <li>Confirmar a existência de tratamento e acessar seus dados.</li>
-        <li>Corrigir dados incompletos, inexatos ou desatualizados.</li>
-        <li>Solicitar a exclusão dos seus dados e da sua conta.</li>
-        <li>Solicitar a portabilidade dos dados.</li>
-        <li>Revogar consentimentos (ex.: desativar permissões de microfone ou notificações).</li>
-      </ul>
-      <p>
-        Para exercer esses direitos, escreva para
-        <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>.
-      </p>
+        <h2>7. Retenção dos dados</h2>
+        <p>
+          Mantemos seus dados enquanto sua conta estiver ativa. Você pode excluir registros individuais a
+          qualquer momento dentro do aplicativo. Ao solicitar a exclusão da conta, seus dados pessoais são
+          removidos, salvo quando a manutenção for exigida por obrigação legal.
+        </p>
 
-      <h2>9. Exclusão da conta e dos dados</h2>
-      <p>Você pode excluir sua conta e todos os dados associados de duas formas:</p>
-      <ul>
-        <li>
-          <strong>No aplicativo (imediato):</strong> abra <em>Perfil → Excluir minha conta</em> e
-          confirme. Isso apaga sua conta de acesso e os dados vinculados a ela nos nossos servidores.
-        </li>
-        <li>
-          <strong>Por e-mail:</strong> envie uma solicitação para
-          <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a> com o e-mail cadastrado.
-          Processaremos a exclusão em até 30 dias.
-        </li>
-      </ul>
-      <div class="callout">
-        <strong>Assinatura:</strong> excluir a conta <strong>não cancela</strong> a assinatura do
-        plano Pro, porque ela é administrada pela loja. Cancele em
-        <em>Google Play → Assinaturas</em> (Android) ou <em>Ajustes → [seu nome] → Assinaturas</em>
-        (iOS).
-      </div>
+        <h2>8. Seus direitos (LGPD)</h2>
+        <p>Você pode, a qualquer momento:</p>
+        <ul>
+          <li>Confirmar a existência de tratamento e acessar seus dados.</li>
+          <li>Corrigir dados incompletos, inexatos ou desatualizados.</li>
+          <li>Solicitar a exclusão dos seus dados e da sua conta.</li>
+          <li>Solicitar a portabilidade dos dados.</li>
+          <li>Revogar consentimentos (ex.: desativar permissões de microfone ou notificações).</li>
+        </ul>
+        <p>
+          Para exercer esses direitos, escreva para
+          <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>.
+        </p>
 
-      <h2>10. Privacidade de crianças</h2>
-      <p>
-        O CalcFrete é destinado a maiores de 18 anos (motoristas profissionais) e não se destina a
-        crianças. Não coletamos intencionalmente dados de menores.
-      </p>
+        <h2>9. Exclusão da conta e dos dados</h2>
+        <p>Você pode excluir sua conta e todos os dados associados de duas formas:</p>
+        <ul>
+          <li>
+            <strong>No aplicativo (imediato):</strong> abra <em>Perfil → Excluir minha conta</em> e
+            confirme. Isso apaga sua conta de acesso e os dados vinculados a ela nos nossos servidores.
+          </li>
+          <li>
+            <strong>Por e-mail:</strong> envie uma solicitação para
+            <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a> com o e-mail cadastrado.
+            Processaremos a exclusão em até 30 dias.
+          </li>
+        </ul>
+        <div class="callout">
+          <strong>Assinatura:</strong> excluir a conta <strong>não cancela</strong> a assinatura do
+          plano Pro, porque ela é administrada pela loja. Cancele em
+          <em>Google Play → Assinaturas</em> (Android) ou <em>Ajustes → [seu nome] → Assinaturas</em>
+          (iOS).
+        </div>
 
-      <h2>11. Alterações nesta política</h2>
-      <p>
-        Podemos atualizar esta Política de Privacidade periodicamente. A versão mais recente estará
-        sempre disponível nesta página, com a data de atualização no topo. Recomendamos revisá-la
-        regularmente.
-      </p>
+        <h2>10. Privacidade de crianças</h2>
+        <p>
+          O CalcFrete é destinado a maiores de 18 anos (motoristas profissionais) e não se destina a
+          crianças. Não coletamos intencionalmente dados de menores.
+        </p>
 
-      <h2>12. Contato</h2>
-      <p>
-        Em caso de dúvidas sobre esta política ou sobre o tratamento dos seus dados, entre em contato:
-        <br />
-        <strong>E-mail:</strong> <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>
-      </p>
-    </main>
+        <h2>11. Alterações nesta política</h2>
+        <p>
+          Podemos atualizar esta Política de Privacidade periodicamente. A versão mais recente estará
+          sempre disponível nesta página, com a data de atualização no topo. Recomendamos revisá-la
+          regularmente.
+        </p>
 
-    <footer>
-      <a href="termos.html">Termos de Uso</a> · © 2026 CalcFrete. Todos os direitos reservados.
-    </footer>
+        <h2>12. Contato</h2>
+        <p>
+          Em caso de dúvidas sobre esta política ou sobre o tratamento dos seus dados, entre em contato:
+          <br />
+          <strong>E-mail:</strong> <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>
+        </p>
+      </main>
+
+      <footer>
+        <a href="termos.html">Termos de Uso</a> · © 2026 CalcFrete. Todos os direitos reservados.
+      </footer>
+    </div>
+
+    <!-- ==================== ENGLISH ==================== -->
+    <div class="doc" data-lang="en" hidden>
+      <header>
+        <h1>Privacy Policy</h1>
+        <p><strong>CalcFrete</strong> app — manager for truck and freight drivers</p>
+      </header>
+
+      <nav class="docnav">
+        <a href="index.html" aria-current="page">Privacy Policy</a>
+        <a href="termos.html">Terms of Use</a>
+      </nav>
+
+      <main>
+        <span class="badge">Last updated: August 6, 2026</span>
+
+        <p>
+          This Privacy Policy describes how the <strong>CalcFrete</strong> app (“app”, “we”) collects,
+          uses, stores and protects the information of its users (“you”). By using CalcFrete, you agree to
+          the practices described in this document. We process your data in accordance with the Brazilian
+          <strong>General Data Protection Law (Law No. 13.709/2018 — LGPD)</strong>.
+        </p>
+
+        <h2>1. Who is responsible for the data</h2>
+        <p>
+          Data processing is carried out by <strong>Innovate Apps Co.</strong>, responsible for the
+          CalcFrete app. For any privacy-related matter, contact us at:
+          <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>.
+        </p>
+
+        <h2>2. What data we collect</h2>
+
+        <h3>2.1. Account data</h3>
+        <ul>
+          <li><strong>Email and password</strong> — used to create and authenticate your account.</li>
+          <li><strong>First name, last name and username</strong> — provided by you during sign-up/profile.</li>
+          <li>
+            <strong>Sign in with Google (optional)</strong> — if you choose to sign in with your Google
+            account, we receive your <strong>name</strong> and <strong>email</strong> from Google to
+            create and authenticate your account. We do not have access to your Google password.
+          </li>
+          <li>
+            <strong>Sign in with Apple (optional, iOS)</strong> — if you choose to sign in with your
+            Apple account, we receive your <strong>name</strong> and <strong>email</strong>. Apple lets
+            you <strong>hide your real email</strong>; in that case we only receive a private relay
+            address (<em>privaterelay.appleid.com</em>), which is what stays on your account. We do not
+            have access to your Apple password.
+          </li>
+        </ul>
+
+        <h3>2.2. Data you enter into the app</h3>
+        <p>This is usage information you voluntarily add in order to use the features:</p>
+        <table>
+          <tr>
+            <th>Feature</th>
+            <th>Data</th>
+          </tr>
+          <tr>
+            <td>Vehicles</td>
+            <td>Model, license plate, mileage, average consumption, fuel price.</td>
+          </tr>
+          <tr>
+            <td>Finances</td>
+            <td>Income, expenses, fuel purchases, amounts, dates, categories and status.</td>
+          </tr>
+          <tr>
+            <td>Logbook / Trips</td>
+            <td>Origin, destination, mileage, freight amount and trip costs.</td>
+          </tr>
+          <tr>
+            <td>Fuel and Maintenance</td>
+            <td>Consumption averages, costs and preventive maintenance reminders.</td>
+          </tr>
+          <tr>
+            <td>Settlements and Freight receipts</td>
+            <td>Daily rates, commissions, advances, deductions and receipt data (sender, recipient, cargo, amount, driver
+              name).</td>
+          </tr>
+          <tr>
+            <td>Working-hours log</td>
+            <td>Records of driving time, stops, rest and meals.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td>Only the document <strong>type</strong> (e.g., driver's license, vehicle registration) and the
+              <strong>expiration date</strong>.</td>
+          </tr>
+          <tr>
+            <td>Reminders and Checklists</td>
+            <td>Titles, dates, times and inspection items.</td>
+          </tr>
+        </table>
+
+        <div class="callout">
+          <strong>Sensitive-data minimization:</strong> in the Documents feature, the app
+          <strong>does not request or store</strong> document numbers, national IDs or photos. We keep
+          only the type and the expiration date, so we can issue expiry alerts.
+        </div>
+
+        <h3>2.3. Audio recording (voice entry)</h3>
+        <p>
+          The app offers an optional <strong>voice entry</strong> feature. When you activate it, the audio
+          is captured by the microphone and sent to an artificial-intelligence service
+          (<strong>Groq</strong>) for transcription and interpretation, in order to create entries
+          automatically. The audio is processed only for that purpose. If you do not use the feature, no
+          audio is captured.
+        </p>
+
+        <h3>2.4. Device permissions</h3>
+        <ul>
+          <li><strong>Microphone</strong> — only when you use voice entry.</li>
+          <li><strong>Notifications</strong> — to send reminders (due dates, daily reminders).</li>
+          <li><strong>Alarms/scheduling</strong> — to schedule reminders locally.</li>
+          <li><strong>Internet</strong> — to sync your data with the cloud.</li>
+          <li>
+            <strong>Advertising identifier (AD_ID)</strong> — used to show ads on the free plan (see
+            section 2.5). It is not used for subscribers of the Pro plan.
+          </li>
+          <li>
+            <strong>Tracking permission (iOS)</strong> — on iPhone/iPad, the system shows the
+            <em>App Tracking Transparency</em> request before any use of the advertising identifier. If
+            you decline, the app keeps working normally and ads remain
+            <strong>non-personalized</strong>.
+          </li>
+        </ul>
+
+        <h3>2.5. Ads (free plan)</h3>
+        <p>
+          The <strong>free</strong> plan of CalcFrete shows ads through <strong>Google AdMob</strong>
+          (Google LLC). For that, AdMob may collect and use the device's
+          <strong>advertising identifier</strong> and technical data (such as device type and ad
+          interactions) to display and measure the ads. Ads are set as <strong>non-personalized</strong>
+          by default.
+        </p>
+        <p>The formats shown are:</p>
+        <ul>
+          <li><strong>Banner</strong> — a fixed strip at the bottom of the screens.</li>
+          <li><strong>App open ad</strong> — shown when you resume the app after sending it to the background.</li>
+          <li>
+            <strong>Rewarded ad</strong> — <em>optional and started by you</em>: by watching the video to
+            the end, you unlock access to a Pro-plan tool during that visit. We record only
+            <strong>how many rewarded ads you watched that day</strong>, to enforce the daily limit.
+          </li>
+        </ul>
+        <p>
+          On first launch, where applicable (for example, in the European Union, United Kingdom and
+          Switzerland), we show a <strong>consent form (UMP)</strong> before any collection for ads, as
+          required by Google. On iOS, the system's tracking permission (ATT) is requested beforehand.
+          <strong>Pro-plan subscribers see no ads</strong> and the advertising identifier is not used for
+          this purpose.
+        </p>
+
+        <h3>2.6. Pro plan subscription</h3>
+        <p>
+          The Pro plan is an <strong>auto-renewable subscription</strong> purchased and charged by your
+          device's store: <strong>Google Play</strong> (Android) or <strong>App Store</strong> (iOS).
+          Payment happens entirely within the store —
+          <strong>we do not receive, process or store card data</strong> or any payment method.
+        </p>
+        <p>
+          To unlock the paid features, the app sends our server the <strong>purchase proof</strong> issued
+          by the store (a token on Android; a receipt on iOS). We validate it with the store and store the
+          <strong>state of your subscription</strong> (active plan, product and expiration date), linked
+          to your account. This proof identifies the purchase, not you.
+        </p>
+
+        <h3>2.7. Integrity check and fraud prevention</h3>
+        <p>
+          To prevent the use of tampered versions of the app and the improper unlocking of paid features,
+          the app may send our server an <strong>integrity attestation</strong> generated by the operating
+          system (<em>Play Integrity API</em>, on Android). This attestation states whether the app and
+          the device are legitimate and <strong>does not identify you personally</strong>.
+        </p>
+
+        <h2>3. How we use your data</h2>
+        <ul>
+          <li>Authenticate your access and keep your session.</li>
+          <li>Provide and operate the app's features (calculations, records, reports).</li>
+          <li>Securely sync and store your data across devices.</li>
+          <li>Send the notifications and reminders you set up.</li>
+          <li>Transcribe audio into entries when you use the voice feature.</li>
+          <li>Improve the app's stability and security.</li>
+        </ul>
+        <p class="muted">
+          We <strong>do not sell</strong> your personal data. On the free plan we show ads via Google
+          AdMob (section 2.5); on the Pro plan there are no ads.
+        </p>
+
+        <h2>4. Legal basis (LGPD)</h2>
+        <p>The processing of your data is based on:</p>
+        <ul>
+          <li><strong>Performance of a contract</strong> — to provide the features you request.</li>
+          <li><strong>Consent</strong> — for optional features, such as the microphone (voice) and notifications.</li>
+          <li><strong>Legitimate interest</strong> — for the security and proper functioning of the app.</li>
+        </ul>
+
+        <h2>5. Sharing with third parties</h2>
+        <p>We use service providers to operate the app:</p>
+        <ul>
+          <li>
+            <strong>Google Firebase (Google LLC)</strong> — authentication and cloud database (Firebase
+            Authentication and Cloud Firestore), where your data is stored isolated per user.
+          </li>
+          <li>
+            <strong>Groq, Inc.</strong> — audio-to-text transcription, only when you use voice entry.
+          </li>
+          <li>
+            <strong>Google AdMob (Google LLC)</strong> — display and measurement of ads on the free plan,
+            which may use the device's advertising identifier (see section 2.5).
+          </li>
+          <li>
+            <strong>Apple Inc.</strong> — iOS only: Sign in with Apple (when you choose that option) and
+            processing of the Pro plan subscription through the App Store.
+          </li>
+          <li>
+            <strong>Google Play (Google LLC)</strong> — Android only: processing of the Pro plan
+            subscription.
+          </li>
+        </ul>
+        <p>
+          These providers process the data according to their own privacy policies and only to provide
+          the services to CalcFrete. We <strong>do not sell</strong> your personal data nor share it for
+          third-party marketing outside the AdMob advertising system described above.
+        </p>
+
+        <h2>6. Storage and security</h2>
+        <ul>
+          <li>Data is transmitted over encrypted connections (HTTPS).</li>
+          <li>
+            We apply security rules that <strong>isolate data per user</strong>: each user can only access
+            their own information.
+          </li>
+          <li>Account access is protected by email and password.</li>
+        </ul>
+        <p class="muted">
+          No method of transmission or storage is 100% secure, but we adopt technical and organizational
+          measures to protect your data.
+        </p>
+
+        <h2>7. Data retention</h2>
+        <p>
+          We keep your data while your account is active. You can delete individual records at any time
+          within the app. When you request account deletion, your personal data is removed, except where
+          retention is required by legal obligation.
+        </p>
+
+        <h2>8. Your rights (LGPD)</h2>
+        <p>At any time, you may:</p>
+        <ul>
+          <li>Confirm the existence of processing and access your data.</li>
+          <li>Correct incomplete, inaccurate or outdated data.</li>
+          <li>Request the deletion of your data and your account.</li>
+          <li>Request data portability.</li>
+          <li>Withdraw consents (e.g., disable microphone or notification permissions).</li>
+        </ul>
+        <p>
+          To exercise these rights, write to
+          <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>.
+        </p>
+
+        <h2>9. Account and data deletion</h2>
+        <p>You can delete your account and all associated data in two ways:</p>
+        <ul>
+          <li>
+            <strong>In the app (immediate):</strong> open <em>Profile → Delete my account</em> and
+            confirm. This deletes your login account and the data linked to it on our servers.
+          </li>
+          <li>
+            <strong>By email:</strong> send a request to
+            <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a> from your registered
+            email. We will process the deletion within 30 days.
+          </li>
+        </ul>
+        <div class="callout">
+          <strong>Subscription:</strong> deleting the account <strong>does not cancel</strong> the Pro
+          plan subscription, because it is managed by the store. Cancel it in
+          <em>Google Play → Subscriptions</em> (Android) or <em>Settings → [your name] → Subscriptions</em>
+          (iOS).
+        </div>
+
+        <h2>10. Children's privacy</h2>
+        <p>
+          CalcFrete is intended for people over 18 (professional drivers) and is not directed to children.
+          We do not intentionally collect data from minors.
+        </p>
+
+        <h2>11. Changes to this policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. The most recent version will always be
+          available on this page, with the update date at the top. We recommend reviewing it regularly.
+        </p>
+
+        <h2>12. Contact</h2>
+        <p>
+          If you have questions about this policy or about the processing of your data, contact us:
+          <br />
+          <strong>Email:</strong> <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>
+        </p>
+      </main>
+
+      <footer>
+        <a href="termos.html">Terms of Use</a> · © 2026 CalcFrete. All rights reserved.
+      </footer>
+    </div>
+
+    <!-- ==================== ESPAÑOL ==================== -->
+    <div class="doc" data-lang="es" hidden>
+      <header>
+        <h1>Política de Privacidad</h1>
+        <p>Aplicación <strong>CalcFrete</strong> — gestor para camioneros y conductores de carga</p>
+      </header>
+
+      <nav class="docnav">
+        <a href="index.html" aria-current="page">Política de Privacidad</a>
+        <a href="termos.html">Términos de Uso</a>
+      </nav>
+
+      <main>
+        <span class="badge">Última actualización: 6 de agosto de 2026</span>
+
+        <p>
+          Esta Política de Privacidad describe cómo la aplicación <strong>CalcFrete</strong> (“aplicación”,
+          “nosotros”) recopila, usa, almacena y protege la información de sus usuarios (“usted”). Al usar
+          CalcFrete, usted acepta las prácticas descritas en este documento. Tratamos sus datos conforme a
+          la <strong>Ley General de Protección de Datos de Brasil (Ley n.º 13.709/2018 — LGPD)</strong>.
+        </p>
+
+        <h2>1. Quién es responsable de los datos</h2>
+        <p>
+          El tratamiento de los datos lo realiza <strong>Innovate Apps Co.</strong>, responsable de la
+          aplicación CalcFrete. Para cualquier asunto relacionado con la privacidad, contáctenos por
+          correo: <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>.
+        </p>
+
+        <h2>2. Qué datos recopilamos</h2>
+
+        <h3>2.1. Datos de cuenta</h3>
+        <ul>
+          <li><strong>Correo y contraseña</strong> — usados para crear y autenticar su cuenta.</li>
+          <li><strong>Nombre, apellido y nombre de usuario</strong> — proporcionados por usted en el registro/perfil.</li>
+          <li>
+            <strong>Inicio de sesión con Google (opcional)</strong> — si opta por entrar con su cuenta de
+            Google, recibimos de Google su <strong>nombre</strong> y <strong>correo</strong> para crear y
+            autenticar su cuenta. No tenemos acceso a su contraseña de Google.
+          </li>
+          <li>
+            <strong>Inicio de sesión con Apple (opcional, iOS)</strong> — si opta por entrar con su cuenta
+            de Apple, recibimos su <strong>nombre</strong> y <strong>correo</strong>. Apple le permite
+            <strong>ocultar su correo real</strong>; en ese caso solo recibimos una dirección de reenvío
+            privada (<em>privaterelay.appleid.com</em>), que es la que queda en su cuenta. No tenemos
+            acceso a su contraseña de Apple.
+          </li>
+        </ul>
+
+        <h3>2.2. Datos que usted ingresa en la aplicación</h3>
+        <p>Es información de uso que usted registra voluntariamente para usar las funciones:</p>
+        <table>
+          <tr>
+            <th>Función</th>
+            <th>Datos</th>
+          </tr>
+          <tr>
+            <td>Vehículos</td>
+            <td>Modelo, matrícula, kilometraje, consumo medio, precio del combustible.</td>
+          </tr>
+          <tr>
+            <td>Finanzas</td>
+            <td>Ingresos, gastos, cargas de combustible, importes, fechas, categorías y estado.</td>
+          </tr>
+          <tr>
+            <td>Bitácora / Viajes</td>
+            <td>Origen, destino, kilometraje, importe del flete y costos del viaje.</td>
+          </tr>
+          <tr>
+            <td>Combustible y Mantenimiento</td>
+            <td>Promedios de consumo, costos y recordatorios de mantenimiento preventivo.</td>
+          </tr>
+          <tr>
+            <td>Liquidaciones y Recibos de flete</td>
+            <td>Viáticos, comisiones, adelantos, descuentos y datos del recibo (remitente, destinatario, carga, importe,
+              nombre del conductor).</td>
+          </tr>
+          <tr>
+            <td>Control de jornada</td>
+            <td>Registros de tiempo de conducción, paradas, descanso y comidas.</td>
+          </tr>
+          <tr>
+            <td>Documentos</td>
+            <td>Solo el <strong>tipo</strong> de documento (p. ej., licencia de conducir, tarjeta del vehículo) y la
+              <strong>fecha de vencimiento</strong>.</td>
+          </tr>
+          <tr>
+            <td>Recordatorios y Checklists</td>
+            <td>Títulos, fechas, horarios e ítems de inspección.</td>
+          </tr>
+        </table>
+
+        <div class="callout">
+          <strong>Minimización de datos sensibles:</strong> en la función de Documentos, la aplicación
+          <strong>no solicita ni almacena</strong> números de documento, identificaciones o fotos.
+          Guardamos únicamente el tipo y la fecha de vencimiento, para emitir avisos de validez.
+        </div>
+
+        <h3>2.3. Grabación de audio (registro por voz)</h3>
+        <p>
+          La aplicación ofrece una función opcional de <strong>registro por voz</strong>. Cuando la
+          activa, el audio se captura con el micrófono y se envía a un servicio de inteligencia artificial
+          (<strong>Groq</strong>) para su transcripción e interpretación, con el fin de crear registros
+          automáticamente. El audio se procesa solo para esa finalidad. Si no usa la función, no se
+          captura ningún audio.
+        </p>
+
+        <h3>2.4. Permisos del dispositivo</h3>
+        <ul>
+          <li><strong>Micrófono</strong> — solo cuando usa el registro por voz.</li>
+          <li><strong>Notificaciones</strong> — para enviar recordatorios (vencimientos, recordatorios del día).</li>
+          <li><strong>Alarmas/programación</strong> — para programar los recordatorios localmente.</li>
+          <li><strong>Internet</strong> — para sincronizar sus datos con la nube.</li>
+          <li>
+            <strong>Identificador de publicidad (AD_ID)</strong> — usado para mostrar anuncios en el plan
+            gratuito (vea la sección 2.5). No se usa para suscriptores del plan Pro.
+          </li>
+          <li>
+            <strong>Permiso de rastreo (iOS)</strong> — en iPhone/iPad, el sistema muestra la solicitud
+            de <em>App Tracking Transparency</em> antes de cualquier uso del identificador de publicidad.
+            Si la rechaza, la app sigue funcionando normalmente y los anuncios permanecen
+            <strong>no personalizados</strong>.
+          </li>
+        </ul>
+
+        <h3>2.5. Anuncios (plan gratuito)</h3>
+        <p>
+          El plan <strong>gratuito</strong> de CalcFrete muestra anuncios a través de
+          <strong>Google AdMob</strong> (Google LLC). Para ello, AdMob puede recopilar y usar el
+          <strong>identificador de publicidad</strong> del dispositivo y datos técnicos (como el tipo de
+          dispositivo y las interacciones con el anuncio) para mostrar y medir los anuncios. Los anuncios
+          están configurados como <strong>no personalizados</strong> de forma predeterminada.
+        </p>
+        <p>Los formatos mostrados son:</p>
+        <ul>
+          <li><strong>Banner</strong> — franja fija en la parte inferior de las pantallas.</li>
+          <li><strong>Anuncio de apertura</strong> — mostrado al retomar la aplicación tras dejarla en segundo plano.</li>
+          <li>
+            <strong>Anuncio recompensado</strong> — <em>opcional e iniciado por usted</em>: al ver el
+            video hasta el final, desbloquea el acceso a una herramienta del plan Pro durante esa visita.
+            Registramos solo <strong>cuántos anuncios recompensados vio en el día</strong>, para aplicar
+            el límite diario.
+          </li>
+        </ul>
+        <p>
+          En la primera ejecución, cuando corresponde (por ejemplo, en la Unión Europea, el Reino Unido y
+          Suiza), mostramos un formulario de <strong>consentimiento (UMP)</strong> antes de cualquier
+          recopilación para anuncios, según lo exige Google. En iOS, el permiso de rastreo del sistema
+          (ATT) se solicita antes. Los suscriptores del <strong>plan Pro no ven anuncios</strong> y el
+          identificador de publicidad no se utiliza para este fin.
+        </p>
+
+        <h3>2.6. Suscripción del plan Pro</h3>
+        <p>
+          El plan Pro es una <strong>suscripción con renovación automática</strong> contratada y cobrada
+          por la tienda de su dispositivo: <strong>Google Play</strong> (Android) o
+          <strong>App Store</strong> (iOS). El pago ocurre completamente dentro de la tienda —
+          <strong>no recibimos, no procesamos ni almacenamos datos de tarjeta</strong> ni ningún medio de
+          pago.
+        </p>
+        <p>
+          Para desbloquear las funciones de pago, la aplicación envía a nuestro servidor el
+          <strong>comprobante de compra</strong> emitido por la tienda (un token en Android; un recibo en
+          iOS). Lo validamos con la tienda y guardamos el <strong>estado de su suscripción</strong> (plan
+          activo, producto y fecha de expiración), vinculado a su cuenta. Ese comprobante identifica la
+          compra, no a usted.
+        </p>
+
+        <h3>2.7. Verificación de integridad y prevención de fraudes</h3>
+        <p>
+          Para impedir el uso de versiones alteradas de la aplicación y el desbloqueo indebido de
+          funciones de pago, la app puede enviar a nuestro servidor una <strong>certificación de
+          integridad</strong> generada por el sistema operativo (<em>Play Integrity API</em>, en Android).
+          Esa certificación indica si la aplicación y el dispositivo son legítimos y
+          <strong>no lo identifica personalmente</strong>.
+        </p>
+
+        <h2>3. Cómo usamos sus datos</h2>
+        <ul>
+          <li>Autenticar su acceso y mantener su sesión.</li>
+          <li>Proporcionar y operar las funciones de la aplicación (cálculos, registros, informes).</li>
+          <li>Sincronizar y almacenar de forma segura sus datos entre dispositivos.</li>
+          <li>Enviar las notificaciones y recordatorios que usted configure.</li>
+          <li>Transcribir audio en registros, cuando use la función de voz.</li>
+          <li>Mejorar la estabilidad y la seguridad de la aplicación.</li>
+        </ul>
+        <p class="muted">
+          <strong>No vendemos</strong> sus datos personales. En el plan gratuito mostramos anuncios vía
+          Google AdMob (sección 2.5); en el plan Pro no hay anuncios.
+        </p>
+
+        <h2>4. Base legal (LGPD)</h2>
+        <p>El tratamiento de sus datos se basa en:</p>
+        <ul>
+          <li><strong>Ejecución de contrato</strong> — para proporcionar las funciones que usted solicita.</li>
+          <li><strong>Consentimiento</strong> — para funciones opcionales, como el micrófono (voz) y las notificaciones.</li>
+          <li><strong>Interés legítimo</strong> — para la seguridad y el buen funcionamiento de la aplicación.</li>
+        </ul>
+
+        <h2>5. Compartir con terceros</h2>
+        <p>Utilizamos proveedores de servicio para operar la aplicación:</p>
+        <ul>
+          <li>
+            <strong>Google Firebase (Google LLC)</strong> — autenticación y base de datos en la nube
+            (Firebase Authentication y Cloud Firestore), donde sus datos se almacenan aislados por
+            usuario.
+          </li>
+          <li>
+            <strong>Groq, Inc.</strong> — transcripción del audio a texto, solo cuando usa el registro por
+            voz.
+          </li>
+          <li>
+            <strong>Google AdMob (Google LLC)</strong> — visualización y medición de anuncios en el plan
+            gratuito, pudiendo usar el identificador de publicidad del dispositivo (vea la sección 2.5).
+          </li>
+          <li>
+            <strong>Apple Inc.</strong> — solo en iOS: inicio de sesión con Apple (cuando elige esa
+            opción) y procesamiento de la suscripción del plan Pro a través de la App Store.
+          </li>
+          <li>
+            <strong>Google Play (Google LLC)</strong> — solo en Android: procesamiento de la suscripción
+            del plan Pro.
+          </li>
+        </ul>
+        <p>
+          Estos proveedores tratan los datos conforme a sus propias políticas de privacidad y solo para
+          prestar los servicios a CalcFrete. <strong>No vendemos</strong> sus datos personales ni los
+          compartimos para marketing de terceros fuera del sistema de anuncios de AdMob descrito arriba.
+        </p>
+
+        <h2>6. Almacenamiento y seguridad</h2>
+        <ul>
+          <li>Los datos se transmiten por conexiones cifradas (HTTPS).</li>
+          <li>
+            Aplicamos reglas de seguridad que <strong>aíslan los datos por usuario</strong>: cada usuario
+            solo accede a su propia información.
+          </li>
+          <li>El acceso a la cuenta está protegido por correo y contraseña.</li>
+        </ul>
+        <p class="muted">
+          Ningún método de transmisión o almacenamiento es 100% seguro, pero adoptamos medidas técnicas y
+          organizativas para proteger sus datos.
+        </p>
+
+        <h2>7. Retención de los datos</h2>
+        <p>
+          Conservamos sus datos mientras su cuenta esté activa. Puede eliminar registros individuales en
+          cualquier momento dentro de la aplicación. Al solicitar la eliminación de la cuenta, sus datos
+          personales se eliminan, salvo cuando la conservación sea exigida por obligación legal.
+        </p>
+
+        <h2>8. Sus derechos (LGPD)</h2>
+        <p>En cualquier momento, usted puede:</p>
+        <ul>
+          <li>Confirmar la existencia de tratamiento y acceder a sus datos.</li>
+          <li>Corregir datos incompletos, inexactos o desactualizados.</li>
+          <li>Solicitar la eliminación de sus datos y de su cuenta.</li>
+          <li>Solicitar la portabilidad de los datos.</li>
+          <li>Revocar consentimientos (p. ej., desactivar permisos de micrófono o notificaciones).</li>
+        </ul>
+        <p>
+          Para ejercer estos derechos, escriba a
+          <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>.
+        </p>
+
+        <h2>9. Eliminación de la cuenta y de los datos</h2>
+        <p>Puede eliminar su cuenta y todos los datos asociados de dos formas:</p>
+        <ul>
+          <li>
+            <strong>En la aplicación (inmediato):</strong> abra <em>Perfil → Eliminar mi cuenta</em> y
+            confirme. Esto borra su cuenta de acceso y los datos vinculados a ella en nuestros servidores.
+          </li>
+          <li>
+            <strong>Por correo:</strong> envíe una solicitud a
+            <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a> desde el correo
+            registrado. Procesaremos la eliminación en un plazo de 30 días.
+          </li>
+        </ul>
+        <div class="callout">
+          <strong>Suscripción:</strong> eliminar la cuenta <strong>no cancela</strong> la suscripción del
+          plan Pro, porque la administra la tienda. Cancele en
+          <em>Google Play → Suscripciones</em> (Android) o <em>Ajustes → [su nombre] → Suscripciones</em>
+          (iOS).
+        </div>
+
+        <h2>10. Privacidad de los niños</h2>
+        <p>
+          CalcFrete está destinado a mayores de 18 años (conductores profesionales) y no está dirigido a
+          niños. No recopilamos intencionalmente datos de menores.
+        </p>
+
+        <h2>11. Cambios en esta política</h2>
+        <p>
+          Podemos actualizar esta Política de Privacidad periódicamente. La versión más reciente estará
+          siempre disponible en esta página, con la fecha de actualización en la parte superior.
+          Recomendamos revisarla con regularidad.
+        </p>
+
+        <h2>12. Contacto</h2>
+        <p>
+          Si tiene dudas sobre esta política o sobre el tratamiento de sus datos, contáctenos:
+          <br />
+          <strong>Correo:</strong> <a href="mailto:innovateappsco@gmail.com">innovateappsco@gmail.com</a>
+        </p>
+      </main>
+
+      <footer>
+        <a href="termos.html">Términos de Uso</a> · © 2026 CalcFrete. Todos los derechos reservados.
+      </footer>
+    </div>
   </div>
+
+  <script>
+    (function () {
+      var docs = document.querySelectorAll('.doc');
+      var btns = document.querySelectorAll('.langbar button');
+      function apply(lang) {
+        for (var i = 0; i < docs.length; i++) {
+          docs[i].hidden = docs[i].getAttribute('data-lang') !== lang;
+        }
+        for (var j = 0; j < btns.length; j++) {
+          btns[j].setAttribute('aria-current', btns[j].getAttribute('data-set') === lang ? 'true' : 'false');
+        }
+        document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+        try { localStorage.setItem('calcfrete_lang', lang); } catch (e) { }
+      }
+      var saved = null;
+      try { saved = localStorage.getItem('calcfrete_lang'); } catch (e) { }
+      var nav = (navigator.language || '').toLowerCase();
+      var initial = saved || (nav.indexOf('es') === 0 ? 'es' : nav.indexOf('en') === 0 ? 'en' : 'pt');
+      apply(initial);
+      for (var k = 0; k < btns.length; k++) {
+        btns[k].addEventListener('click', function () { apply(this.getAttribute('data-set')); });
+      }
+    })();
+  </script>
 </body>
 
 </html>
